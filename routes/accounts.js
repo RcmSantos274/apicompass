@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const Account = require('apicompass/models/account')
-const Customer = require('apicompass/models/customer')
-const { generateAccountId, generateAccountNumber } = require('apicompass/utils/generators')
+const Account = require('../models/account')
+const Customer = require('../models/customer')
+const { generateAccountId, generateAccountNumber } = require('../utils/generators')
 
 router.post('/customers/:customerId/accounts', async (req, res) => {
   try {
